@@ -11,29 +11,28 @@ struct node {
 };
 node *head;
 
-node *newentry() {
+node *newnode() {
     return malloc(sizeof(node));
 }
 
 void deltrie(node *p) {
-    if (p->next[0]) {
-        deltrie(p->next[0]);
+    if (p == NULL) {
+        return;
     }
-    if (p->next[1]) {
-        deltrie(p->next[1]);
-    }
+    deltrie(p->next[0]);
+    deltrie(p->next[1]);
     free(p);
 }
 
 node *addedge(node *n, int b) {
     if (n->next[b] == NULL) {
-        n->next[b] = newentry();
+        n->next[b] = newnode();
     }
     return n->next[b];
 }
 
 int main() {
-    head = newentry();
+    head = newnode();
     char buffer[BUFFSIZE];
     char *bit;
     int i, n;
@@ -62,7 +61,7 @@ int main() {
         }
     }
 
-    deltrie(head);
-
     putchar('\n');
+
+    deltrie(head);
 }
