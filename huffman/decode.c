@@ -70,4 +70,6 @@ int main() {
     putchar('\n');
 
     deltrie(head);
+
+    return 0;
 }
