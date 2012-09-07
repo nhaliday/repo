@@ -1,3 +1,9 @@
+/*
+ * Nick Haliday
+ * Parallel Computing 1
+ * Torbert
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

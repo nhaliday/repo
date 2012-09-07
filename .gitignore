@@ -14,3 +14,6 @@
 
 # DWARF Debug info
 *.dSYM
+
+# Backup files
+*~
