@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define BUFFSIZE 1000
+#define BUFFSIZE 10000
 
 typedef struct node node;
 struct node {
