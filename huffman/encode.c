@@ -83,9 +83,17 @@ node *make_scheme_trie(int count[ASCII]) {
 
     qsort(arr, cnt, sizeof(wrapper), &wrapper_compare);
 
-    for (i = 0; i < cnt - 1; ++cnt) {
 
+    wrapper *arr2 = malloc(cnt * sizeof(wrapper));
+    int cnt2 = 0;
+
+    for (i = 0; i < cnt - 1; ++cnt) {
+        if (cnt2 < 1) {
+
+        }
     }
+
+    free(arr);
 }
 
 /* end huffman scheme */
